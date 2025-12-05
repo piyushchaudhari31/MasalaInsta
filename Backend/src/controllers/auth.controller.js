@@ -61,8 +61,11 @@ async function userLogin(req, res) {
   }
 
   const token = jwt.sign({ id: emailExist._id }, process.env.JSON_TOKEN);
-  res.cookie("token", token);
-
+  res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none"
+});
   res.status(200).json({
     message: "Login Successfully",
     token,
@@ -153,8 +156,11 @@ async function loginFoodPartner(req, res) {
   }
 
   const token = jwt.sign({ id: emailExist._id }, process.env.JSON_TOKEN);
-  res.cookie("token", token);
-
+ res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none"
+});
   res.status(200).json({
     message: "Login Successfully",
     token:token
