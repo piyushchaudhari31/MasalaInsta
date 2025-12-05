@@ -1,0 +1,104 @@
+@import "./theme.css";
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  background: color-mix(in srgb, #000 35%, transparent);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 50;
+}
+
+.bottom-nav__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  gap: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bottom-nav__item.is-active {
+  color: var(--color-text);
+}
+
+.bottom-nav__icon i {
+  font-size: 22px;
+}
+
+.bottom-nav__label {
+  font-size: 12px;
+}
+
+/* ---------- DROPDOWN PROPER CSS ---------- */
+
+.profile-wrapper {
+  position: relative;
+}
+
+/* Hidden by default */
+.profile-dropdown {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+
+  padding: 10px 0;
+  border-radius: 10px;
+  min-width: 130px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s ease-in-out;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.profile-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+/* Dropdown Buttons */
+.profile-dropdown button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Safe area support */
+@supports (padding: max(0px)) {
+  .bottom-nav {
+    padding-bottom: max(env(safe-area-inset-bottom), 0px);
+  }
+}

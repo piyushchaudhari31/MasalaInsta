@@ -1,0 +1,13 @@
+.reel-overlay {
+  pointer-events: none;
+}
+
+.reel-actions,
+.reel-action-group,
+.reel-action {
+  pointer-events: auto; /* Buttons clickable */
+}
+
+.reel-overlay-gradient {
+  pointer-events: none;
+}

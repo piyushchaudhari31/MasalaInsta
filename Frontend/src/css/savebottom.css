@@ -1,0 +1,29 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+.bottom-nav__inner {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+}
+
+.bottom-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #888;
+    font-size: 14px;
+}
+
+
+.bottom-nav__icon i {
+    font-size: 22px;
+}
