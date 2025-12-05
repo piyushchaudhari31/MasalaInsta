@@ -8,7 +8,7 @@ const Reelsvideo = (props) => {
 
   const [data, setdata] = useState('')
   
-  const url = "http://localhost:3000"
+  const url = "https://masalainsta-backend.onrender.com"
   
 
   async function getData() {
