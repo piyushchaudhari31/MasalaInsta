@@ -23,7 +23,7 @@ const Reelsvideo = (props) => {
 
   useEffect(()=>{
     getData()
-  },[data])
+  },[])
 
 
 

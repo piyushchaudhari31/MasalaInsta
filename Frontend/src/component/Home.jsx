@@ -16,7 +16,7 @@ const Home = () => {
 
     useEffect(() => {
       toast.promise(
-        axios.get(`${url}/api/food`,{}, { withCredentials: true }),{
+        axios.get(`${url}/api/food`,{ withCredentials: true }),{
           loading:"Loading..",
           success:"",
           error:""
