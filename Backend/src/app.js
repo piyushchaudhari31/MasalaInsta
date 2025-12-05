@@ -10,7 +10,7 @@ const app =express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"https://piyushchaudhari-masalainsta.onrender.com",
+    origin:"*",
     credentials:true
 }))
 app.use('/api/auth',authRoutes)
