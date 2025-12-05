@@ -14,7 +14,7 @@ const Saved = () => {
 
     useEffect(() => {
         
-            axios.get(`${url}/api/food/save`,{}, { withCredentials: true })
+            axios.get(`${url}/api/food/save`,{ withCredentials: true })
         .then(response => {
 
                 const savedFoods = response.data.savedFoods.map((item) => ({
