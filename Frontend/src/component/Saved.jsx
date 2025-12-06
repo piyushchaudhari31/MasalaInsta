@@ -55,7 +55,6 @@ const Saved = () => {
     <div className="reels-page">
         
     
-        <h1 className="save_page_title">Saved</h1>
 
         <div className="reels-feed">
             <Savereelfeed
